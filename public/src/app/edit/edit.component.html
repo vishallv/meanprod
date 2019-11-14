@@ -1,0 +1,17 @@
+<div>
+<h1>Edit Product</h1>
+
+<form>
+    Title: <input type="text" name="title" value="{{editData.title}}" [(ngModel)] = "editData.title">
+    Price: <input type="number" name="price" value="{{editData.price}}" [(ngModel)] = "editData.price">
+    Image URl: <input type="text" name="titel" value="{{editData.image}}" [(ngModel)] = "editData.image">
+    <button (click) = "updateProduct()">Update</button>
+    <button (click) = "cancelUpdate()">Cancel</button>
+</form>
+
+
+<ul *ngIf = 'errorMessage'>
+    <li *ngFor = "let error of errorMessage">{{error}}</li>
+</ul>
+
+</div>

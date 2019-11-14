@@ -1,0 +1,12 @@
+<div *ngIf="myboolean == false">
+    <div *ngFor = "let product of allProducts">
+
+        <img src="{{product.image}}" alt="">
+        <p>{{product.title}}</p>
+        <p>${{product.price}}</p>
+        <button (click) = 'editProduct(product._id)'>Edit</button>
+        <button (click) = 'deleteProduct(product._id)'>Delete</button>
+    </div>
+
+</div>
+

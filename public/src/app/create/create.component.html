@@ -1,0 +1,16 @@
+<div>
+<h1>Create a New Product</h1>
+
+<form>
+    Title: <input type="text" name="title" [(ngModel)] = "createData.title">
+    Price: <input type="number" name="price" [(ngModel)] = "createData.price">
+    Image URl : <input type="text" name="image" [(ngModel)] = "createData.image">
+
+    <button (click) = "createNewProduct()">Create</button>
+    <button (click) = "cancelCreate()">Cancel</button>
+</form>
+
+<ul *ngIf = "errorMessage">
+    <li *ngFor = "let error of errorMessage"> {{error}}</li>
+</ul>
+</div>
